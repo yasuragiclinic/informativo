@@ -1,76 +1,169 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yasuragi Clinic 安らぎ</title>
+  <title>Clínica Yasuragi</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-    header { background: #e8f0f2; padding: 40px 20px; text-align: center; border-bottom: 1px solid #dcdcdc; }
-    header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
-    header p { margin-top: 10px; font-size: 1.2rem; }
-    section { max-width: 900px; margin: 40px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    h2 { border-left: 4px solid #78a6b8; padding-left: 10px; margin-top: 0; }
-    ul { line-height: 1.7; }
-    .sub { font-weight: bold; margin-top: 10px; }
+    /* PALETA OFICIAL */
+    :root {
+      --azul: #5A7C98;
+      --azul-suave: #E4EEF4;
+      --cinza: #BFC6C9;
+      --preto: #1F1F1F;
+      --branco: #FAFAFA;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--branco);
+      color: var(--preto);
+      line-height: 1.7;
+    }
+
+    /* SÍMBOLO ENSO + BAMBU */
+    .symbol {
+      width: 70px;
+      height: 70px;
+      border: 4px solid var(--azul);
+      border-radius: 50%;
+      border-right-color: transparent;
+      margin: 20px auto 0;
+      position: relative;
+    }
+
+    .symbol::after {
+      content: "";
+      width: 3px;
+      height: 30px;
+      background: var(--azul);
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translateX(-50%) rotate(20deg);
+      border-radius: 3px;
+    }
+
+    header {
+      background: var(--azul-suave);
+      padding: 50px 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin: 20px 0 5px;
+      letter-spacing: 1px;
+      color: var(--preto);
+    }
+
+    header p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    /* CONTAINERS */
+    section {
+      max-width: 850px;
+      margin: 40px auto;
+      background: var(--branco);
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+      color: var(--azul);
+    }
+
+    h2 {
+      border-left: 4px solid var(--azul);
+      padding-left: 10px;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--azul);
+    }
+
+    /* CONTATO */
+    .contato-section {
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Yasuragi Clinic 安らぎ</h1>
-  <p>Psicoterapia • Bem-estar • Reconstrução emocional</p>
-</header>
-<section class="clinica">
-  <h1>Sobre a Clínica Yasuragi</h1>
+  <!-- SÍMBOLO -->
+  <div class="symbol"></div>
 
-  <p>
-    A Clínica Yasuragi nasce da união entre cuidado emocional e serenidade. 
-    Seu nome carrega o significado de <em>安らぎ</em>, que pode ser compreendido como tranquilidade ou descanso, 
-    um espaço onde o corpo e a mente encontram suavidade. Cada encontro aqui é pensado com esse espírito.
-  </p>
+  <header>
+    <h1>Clínica Yasuragi</h1>
+    <p>Psicoterapia • Bem-estar • Reconstrução emocional</p>
+  </header>
 
-  <p>
-    Nosso propósito é oferecer um lugar de acolhimento profundo, onde cada pessoa possa se sentir 
-    vista, ouvida e compreendida sem julgamentos. Trabalhamos com uma escuta cuidadosa que respeita 
-    a singularidade de cada trajetória e acompanha seu ritmo interno com delicadeza.
-  </p>
+  <section class="clinica">
+    <h1>Sobre a Clínica Yasuragi</h1>
 
-  <p>
-    A clínica foi criada para ser um refúgio emocional. Um ambiente onde você pode pousar suas questões 
-    e criar espaço para o que sente. Junto com a terapeuta, é possível construir caminhos de equilíbrio, 
-    clareza e continuidade, sempre com respeito ao seu tempo.
-  </p>
+    <p>
+      A Clínica Yasuragi nasce da união entre cuidado emocional e serenidade. 
+      Seu nome carrega o significado de <em>安らぎ</em>, que pode ser compreendido como tranquilidade ou descanso, 
+      um espaço onde o corpo e a mente encontram suavidade. Cada encontro aqui é pensado com esse espírito.
+    </p>
 
-  <h2>Nossa abordagem</h2>
-  <p>
-    A Yasuragi integra práticas de psicoterapia individual, acompanhamento breve e atendimentos que unem 
-    técnicas contemporâneas a uma visão humana e sensível do cuidado. Acreditamos que a transformação emocional 
-    se fortalece em encontros consistentes e verdadeiros.
-  </p>
+    <p>
+      Nosso propósito é oferecer um lugar de acolhimento profundo, onde cada pessoa possa se sentir 
+      vista, ouvida e compreendida sem julgamentos. Trabalhamos com uma escuta cuidadosa que respeita 
+      a singularidade de cada trajetória e acompanha seu ritmo interno com delicadeza.
+    </p>
 
-  <h2>Para quem é</h2>
-  <ul>
-    <li>Pessoas que desejam compreender suas emoções com mais profundidade</li>
-    <li>Quem está atravessando mudanças importantes e busca apoio</li>
-    <li>Quem procura estabilidade e autoconhecimento</li>
-    <li>Pessoas que precisam de um espaço seguro para compartilhar sua história</li>
-  </ul>
+    <p>
+      A clínica foi criada para ser um refúgio emocional. Um ambiente onde você pode pousar suas questões 
+      e criar espaço para o que sente. Junto com a terapeuta, é possível construir caminhos de equilíbrio, 
+      clareza e continuidade, sempre com respeito ao seu tempo.
+    </p>
 
-  <h2>Como trabalhamos</h2>
-  <ul>
-    <li>Atendimento online</li>
-    <li>Processos terapêuticos personalizados</li>
-    <li>Interesse constante no momento emocional de quem nos procura</li>
-    <li>Acolhimento como fundamento central do trabalho</li>
-  </ul>
-</section>
+    <h2>Nossa abordagem</h2>
+    <p>
+      A Yasuragi integra práticas de psicoterapia individual, acompanhamento breve e atendimentos que unem 
+      técnicas contemporâneas a uma visão humana e sensível do cuidado. Acreditamos que a transformação emocional 
+      se fortalece em encontros consistentes e verdadeiros.
+    </p>
+
+    <h2>Para quem é</h2>
+    <ul>
+      <li>Pessoas que desejam compreender suas emoções com mais profundidade</li>
+      <li>Quem está atravessando mudanças importantes e busca apoio</li>
+      <li>Quem procura estabilidade e autoconhecimento</li>
+      <li>Pessoas que precisam de um espaço seguro para compartilhar sua história</li>
+    </ul>
+
+    <h2>Como trabalhamos</h2>
+    <ul>
+      <li>Atendimento online</li>
+      <li>Processos terapêuticos personalizados</li>
+      <li>Interesse constante no momento emocional de quem nos procura</li>
+      <li>Acolhimento como fundamento central do trabalho</li>
+    </ul>
   </section>
 
-<section>
-  <h2>Contato</h2>
-     <strong>Email:</strong> yasuragiclinic.yh@gmail.com
-</section>
+  <section class="contato-section">
+    <h2>Contato</h2>
+    <p><strong>Email:</strong> yasuragiclinic.yh@gmail.com</p>
+  </section>
 
 </body>
 </html>
