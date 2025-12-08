@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Yasuragi</title>
+
+  <style>
+    /* PALETA */
+    :root {
+      --azul: #5A7C98;
+      --azul-suave: #E4EEF4;
+      --cinza: #BFC6C9;
+      --preto: #1F1F1F;
+      --branco: #FAFAFA;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--branco);
+      color: var(--preto);
+    }
+
+    /* SYMBOL ENSO + BAMBU (placeholder) */
+    .symbol {
+      width: 70px;
+      height: 70px;
+      border: 4px solid var(--azul);
+      border-radius: 50%;
+      border-right-color: transparent;
+      margin: 20px auto 10px;
+      position: relative;
+    }
+
+    .symbol::after {
+      content: "";
+      width: 3px;
+      height: 30px;
+      background: var(--azul);
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translateX(-50%) rotate(20deg);
+      border-radius: 3px;
+    }
+
+    /* HERO SECTION */
+    header {
+      background: var(--azul-suave);
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: var(--azul);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* BOTÕES SECUNDÁRIOS */
+    .section-buttons {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section-buttons a {
+      display: block;
+      margin: 15px auto;
+      width: 250px;
+      padding: 14px;
+      background: var(--azul);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    /* INSTAGRAM */
+    .instagram {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--azul-suave);
+    }
+
+    .instagram a {
+      color: var(--azul);
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 13px;
+      color: #666;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SÍMBOLO -->
+  <div class="symbol"></div>
+
+  <!-- HERO -->
+  <header>
+    <h1>Yasuragi — onde o corpo respira e a mente descansa</h1>
+    <p>Cuidado integrativo, sutileza e presença.</p>
+    <a href="#" class="btn">Conheça a Clínica</a>
+  </header>
+
+  <!-- TRÊS BOTÕES PRINCIPAIS -->
+  <section class="section-buttons">
+    <a href="#">Informações da Clínica</a>
+    <a href="#">Sobre Hana</a>
+    <a href="#">Formulário de Atendimento</a>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="instagram">
+    <p>acompanhe nossos conteúdos de bem-estar</p>
+    <a href="https://instagram.com/yasuragi.clinic">@yasuragi.clinic</a>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
+    Endereço: <i>Kobe-shi, Chūō-ku, Hanakuma, 2-19-8 — Japão</i><br>
+    © 2025 Yasuragi
+  </footer>
+
+</body>
+</html>
