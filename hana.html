@@ -1,116 +1,182 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yasuragi Clinic 安らぎ</title>
+  <title>Sobre Hana Aoyuki — Yasuragi</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-    header { background: #e8f0f2; padding: 40px 20px; text-align: center; border-bottom: 1px solid #dcdcdc; }
-    header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
-    header p { margin-top: 10px; font-size: 1.2rem; }
-    section { max-width: 900px; margin: 40px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    h2 { border-left: 4px solid #78a6b8; padding-left: 10px; margin-top: 0; }
-    ul { line-height: 1.7; }
-    .sub { font-weight: bold; margin-top: 10px; }
+    /* PALETA OFICIAL */
+    :root {
+      --azul: #5A7C98;
+      --azul-suave: #E4EEF4;
+      --cinza: #BFC6C9;
+      --preto: #1F1F1F;
+      --branco: #FAFAFA;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--branco);
+      color: var(--preto);
+      line-height: 1.7;
+    }
+
+    /* SÍMBOLO ENSO + BAMBU */
+    .symbol {
+      width: 70px;
+      height: 70px;
+      border: 4px solid var(--azul);
+      border-radius: 50%;
+      border-right-color: transparent;
+      margin: 20px auto 0;
+      position: relative;
+    }
+
+    .symbol::after {
+      content: "";
+      width: 3px;
+      height: 30px;
+      background: var(--azul);
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translateX(-50%) rotate(20deg);
+      border-radius: 3px;
+    }
+
+    header {
+      background: var(--azul-suave);
+      padding: 50px 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin: 20px 0 5px;
+      letter-spacing: 1px;
+      color: var(--preto);
+    }
+
+    header p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    /* CONTAINERS */
+    section {
+      max-width: 850px;
+      margin: 40px auto;
+      background: var(--branco);
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+      color: var(--azul);
+    }
+
+    h2 {
+      border-left: 4px solid var(--azul);
+      padding-left: 10px;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .sub {
+      font-weight: bold;
+      color: var(--azul);
+    }
   </style>
 </head>
+
 <body>
 
-<header>
+  <!-- SÍMBOLO -->
+  <div class="symbol"></div>
+
+  <header>
+    <h1>Sobre Hana Aoyuki</h1>
+    <p>Terapeuta e fundadora da Clínica Yasuragi</p>
+  </header>
+
   <section class="bio">
-  <h1>Sobre Hana Aoyuki</h1>
+    <p>
+      Hana Aoyuki é terapeuta e fundadora da Clínica Yasuragi. Sua prática nasce do desejo de construir 
+      um espaço de acolhimento onde cada pessoa possa ser recebida com calma e presença. Inspirada pela 
+      filosofia japonesa do cuidado e pela ideia de <em>安らぎ</em> que significa serenidade, sua abordagem 
+      é guiada pela sensibilidade, pela escuta profunda e pela compreensão do que cada história carrega.
+    </p>
 
-  <p>
-    Hana Aoyuki é terapeuta e fundadora da Clínica Yasuragi. Sua prática nasce do desejo de construir 
-    um espaço de acolhimento onde cada pessoa possa ser recebida com calma e presença. Inspirada pela 
-    filosofia japonesa do cuidado e pela ideia de <em>安らぎ</em> que significa serenidade, sua abordagem 
-    é guiada pela sensibilidade, pela escuta profunda e pela compreensão do que cada história carrega.
-  </p>
+    <p>
+      Sua formação integra psicoterapia individual, estudos em processos emocionais, desenvolvimento humano 
+      e técnicas de acompanhamento breve. Hana dedica-se a criar encontros terapêuticos que acompanham o ritmo 
+      interno de cada pessoa, respeitando seus limites, sua força e o momento que está atravessando.
+    </p>
 
-  <p>
-    Sua formação integra psicoterapia individual, estudos em processos emocionais, desenvolvimento humano 
-    e técnicas de acompanhamento breve. Hana dedica-se a criar encontros terapêuticos que acompanham o ritmo 
-    interno de cada pessoa, respeitando seus limites, sua força e o momento que está atravessando.
-  </p>
+    <p>
+      Seu trabalho é pautado pela ética e pelo cuidado contínuo. Hana acredita que a terapia é um lugar 
+      de encontro consigo mesmo e que uma escuta acolhedora pode abrir caminhos de transformação real.
+    </p>
 
-  <p>
-    Seu trabalho é pautado pela ética e pelo cuidado contínuo. Hana acredita que a terapia é um lugar 
-    de encontro consigo mesmo e que uma escuta acolhedora pode abrir caminhos de transformação real.
-  </p>
+    <h2>Áreas de interesse</h2>
+    <ul>
+      <li>Autoconhecimento e fortalecimento emocional</li>
+      <li>Regulação e compreensão das emoções</li>
+      <li>Acompanhamento em transições e mudanças de vida</li>
+      <li>Construção de limites saudáveis</li>
+      <li>Relacionamentos, vínculos e afetos</li>
+    </ul>
 
-  <h2>Áreas de interesse</h2>
-  <ul>
-    <li>Autoconhecimento e fortalecimento emocional</li>
-    <li>Regulação e compreensão das emoções</li>
-    <li>Acompanhamento em transições e mudanças de vida</li>
-    <li>Construção de limites saudáveis</li>
-    <li>Relacionamentos, vínculos e afetos</li>
-  </ul>
-
-  <h2>Formação e prática</h2>
-  <ul>
-    <li>Psicoterapia individual com perspectiva integrativa</li>
-    <li>Estudos em desenvolvimento humano e saúde emocional</li>
-    <li>Experiência com escuta sensível e processos terapêuticos breves</li>
-  </ul>
+    <h2>Formação e prática</h2>
+    <ul>
+      <li>Psicoterapia individual com perspectiva integrativa</li>
+      <li>Estudos em desenvolvimento humano e saúde emocional</li>
+      <li>Experiência com escuta sensível e processos terapêuticos breves</li>
+    </ul>
   </section>
 
-<section>
-  <h2>Formação Acadêmica</h2>
-  <ul>
-    <li><span class="sub">Bacharelado em Psicologia (2016–2020)</span><br>Universidade de Keio – 慶應義塾大学, Tóquio.<br>Enfoque em Psicologia Clínica e Desenvolvimento.</li>
-    <li><span class="sub">Mestrado Profissional em Psicologia Clínica (2020–2022)</span><br>Tokyo Professional Graduate School of Psychology – 東京臨床心理専門大学院大学.<br>Estágios em hospitais, clínicas e centros sociais.</li>
-    <li><span class="sub">Licença Oficial – 公認心理師 (2022)</span><br>Aprovação no Exame Nacional.</li>
-  </ul>
-</section>
+  <section>
+    <h2>Formação Acadêmica</h2>
+    <ul>
+      <li>
+        <span class="sub">Bacharelado em Psicologia (2016–2020)</span><br>
+        Universidade de Keio – 慶應義塾大学, Tóquio.<br>
+        Enfoque em Psicologia Clínica e Desenvolvimento.
+      </li>
 
-<section>
-  <h2>Formação Complementar</h2>
-  <ul>
-    <li>Certificação em Terapia Cognitivo-Comportamental (2022–2023)</li>
-    <li>Formação em Terapia Narrativa (2021)</li>
-    <li>Curso Avançado em Psicoterapia para Trauma Complexo (2023)</li>
-    <li>Mindfulness aplicado à clínica • Psicoterapia Transpessoal • Emergências Psicológicas • Violência Doméstica</li>
-  </ul>
-</section>
+      <li>
+        <span class="sub">Mestrado Profissional em Psicologia Clínica (2020–2022)</span><br>
+        Tokyo Professional Graduate School of Psychology – 東京臨床心理専門大学院大学.<br>
+        Estágios em hospitais, clínicas e centros sociais.
+      </li>
 
-<section>
-  <h2>Experiência Profissional</h2>
-  <ul>
-    <li><span class="sub">Centro Comunitário de Saúde Mental de Yokohama (2022–2023)</span><br>Atendimento clínico, protocolos para TEPT, suporte interdisciplinar.</li>
-    <li><span class="sub">Shinjuku Mental Health Institute (2023–2024)</span><br>Grupos terapêuticos, ansiedade, burnout, depressão.</li>
-    <li><span class="sub">Fundadora da Yasuragi Clinic (2024–Presente)</span><br>Psicoterapia individual, programas de saúde mental e consultoria.</li>
-  </ul>
-</section>
+      <li>
+        <span class="sub">Licença Oficial – 公認心理師 (2022)</span><br>
+        Aprovação no Exame Nacional.
+      </li>
+    </ul>
+  </section>
 
-<section>
-  <h2>Projetos, Pesquisas e Publicações</h2>
-  <ul>
-    <li><span class="sub">Pesquisa sobre trauma e microagressões (2021–2022)</span><br>Apresentada em conferência nacional.</li>
-    <li>Artigo: “Urban Stress and the Quiet Collapse” – Shinri Journal (2023)</li>
-    <li>Artigo: “Narrativas Fragmentadas” – Journal of Clinical Narratives (2024)</li>
-    <li>Projeto Yasuragi: Psicoterapia de Baixo Custo (2024–)</li>
-    <li>Grupo terapêutico feminino “Florescer – Hanasaku 花咲く”</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Trabalhos Voluntários & Causas</h2>
-  <ul>
-    <li>Cruz Vermelha Japonesa – Apoio em desastres naturais (2018–2019)</li>
-    <li>Projeto "Green Minds" – Meio ambiente e saúde mental (2021–2022)</li>
-    <li>Tokyo Lifeline – Prevenção ao suicídio (2020–2023)</li>
-    <li>Sakura Support – Apoio a estudantes (2019–2020)</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Contato</h2>
-     <strong>Email:</strong> aoyukih@gmail.com</li>
-  <ul>
-     <strong>Instagram:</strong> @iknowthisloveofmine</li>
-</section>
+  <section>
+    <h2>Formação Complementar</h2>
+    <ul>
+      <li>Certificação em Terapia Cognitivo-Comportamental (2022–2023)</li>
+      <li>Formação em Terapia Narrativa (2021)</li>
+      <li>Curso Avançado em Psicoterapia para Trauma Complexo (2023)</li>
+    </ul>
+  </section>
 
 </body>
 </html>
