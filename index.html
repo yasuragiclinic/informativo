@@ -32,53 +32,45 @@
       font-weight: 500;
     }
 
+    section {
+      padding: 80px 20px;
+    }
+
     img {
       width: 100%;
       border-radius: 18px;
       display: block;
     }
 
-    /* ===== CABEÇALHO FIXO ===== */
+    /* CABEÇALHO FIXO */
     .topbar {
       position: sticky;
       top: 0;
       z-index: 1000;
       background: var(--azul);
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 14px 24px;
+      padding: 14px 16px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    .topbar strong {
-      color: white;
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-    }
-
-    .topbar nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
     }
 
     .topbar nav a {
       color: white;
       text-decoration: none;
+      margin: 0 14px;
       font-size: 15px;
-      white-space: nowrap;
     }
 
     .topbar nav a.formulario {
       background: white;
       color: var(--azul);
       padding: 8px 16px;
-      border-radius: 999px;
+      border-radius: 20px;
       font-weight: 500;
     }
 
-    /* ===== HERO ===== */
+    /* HERO */
     header {
       background:
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
@@ -101,11 +93,7 @@
       line-height: 1.7;
     }
 
-    /* ===== BLOCOS DE CONTEÚDO ===== */
-    section {
-      padding: 80px 20px;
-    }
-
+    /* BLOCOS */
     .block {
       background: var(--branco);
       max-width: 1100px;
@@ -131,11 +119,7 @@
       width: 55%;
     }
 
-    .block p {
-      line-height: 1.7;
-    }
-
-    /* ===== AÇÕES ===== */
+    /* AÇÕES */
     .actions {
       background: var(--azul-suave);
     }
@@ -160,13 +144,11 @@
       gap: 30px;
     }
 
-    /* ===== RODAPÉ ===== */
     footer {
       text-align: center;
       padding: 30px;
       font-size: 13px;
       color: #777;
-      background: var(--branco);
     }
 
     @media (max-width: 900px) {
@@ -179,15 +161,18 @@
       .block div {
         width: 100%;
       }
+
+      header {
+        padding: 140px 20px 120px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<!-- MENU -->
+<!-- CABEÇALHO -->
 <div class="topbar">
-  <strong>Yasuragi</strong>
   <nav>
     <a href="index.html">Início</a>
     <a href="clinica.html">Clínica</a>
@@ -206,7 +191,7 @@
 <!-- CONTEÚDO -->
 <section>
   <div class="block">
-    <img src="img/ampulheta.jpg">
+    <img src="img/ampulheta.jpg" alt="O tempo como parte do cuidado">
     <div>
       <h2>Cuidar é respeitar o tempo</h2>
       <p>
@@ -217,24 +202,23 @@
   </div>
 
   <div class="block reverse">
-    <img src="img/infantil.jpg">
+    <img src="img/infantil.jpg" alt="Atendimento psicológico infantil">
     <div>
       <h2>Cuidado em cada fase da vida</h2>
       <p>
-        Atendimentos que respeitam histórias,
-        contextos e diferentes momentos da vida.
+        Atendimentos que respeitam histórias, contextos
+        e diferentes momentos da vida.
       </p>
     </div>
   </div>
 </section>
 
-<!-- AÇÕES -->
 <section class="actions">
   <div class="actions-group">
     <h3>Rodas e grupos terapêuticos</h3>
     <p>Espaços coletivos de escuta, troca e construção de vínculos.</p>
     <div class="actions-grid">
-      <img src="img/acoes-roda.jpg">
+      <img src="img/acoes-roda.jpg" alt="Roda de conversa">
     </div>
   </div>
 
@@ -242,8 +226,8 @@
     <h3>Cuidado com o meio ambiente</h3>
     <p>Ações que reforçam o cuidado como responsabilidade coletiva.</p>
     <div class="actions-grid">
-      <img src="img/acoes-maos-terra.jpg">
-      <img src="img/acoes-plantio.jpg">
+      <img src="img/acoes-maos-terra.jpg" alt="Mãos na terra">
+      <img src="img/acoes-plantio.jpg" alt="Plantio coletivo">
     </div>
   </div>
 
@@ -251,17 +235,16 @@
     <h3>Ações solidárias</h3>
     <p>Campanhas de arrecadação e apoio à comunidade.</p>
     <div class="actions-grid">
-      <img src="img/acoes-marmitas.jpg">
-      <img src="img/acoes-sacolas.jpg">
-      <img src="img/acoes-voluntarios.jpg">
+      <img src="img/acoes-marmitas.jpg" alt="Distribuição de refeições">
+      <img src="img/acoes-sacolas.jpg" alt="Doação de alimentos">
+      <img src="img/acoes-voluntarios.jpg" alt="Voluntariado">
     </div>
   </div>
 </section>
 
-<!-- RODAPÉ -->
 <footer>
   Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
-  Kobe-shi, Chūō-ku, Hanakuma — Japão<br>
+  Kobe-shi, Chūō-ku, Hanakuma, 2-19-8 — Japão<br>
   © 2025 Yasuragi
 </footer>
 
