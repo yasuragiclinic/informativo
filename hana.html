@@ -3,180 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre Hana Aoyuki — Yasuragi</title>
+  <title>Fundadora — Clínica Yasuragi</title>
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* PALETA OFICIAL */
     :root {
       --azul: #5A7C98;
-      --azul-suave: #E4EEF4;
-      --cinza: #BFC6C9;
-      --preto: #1F1F1F;
+      --azul-escuro: #3F5F77;
+      --azul-suave: #EEF3F7;
+      --texto: #555;
       --branco: #FAFAFA;
     }
 
     body {
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: var(--branco);
-      color: var(--preto);
-      line-height: 1.7;
-    }
-
-    /* SÍMBOLO ENSO + BAMBU */
-    .symbol {
-      width: 70px;
-      height: 70px;
-      border: 4px solid var(--azul);
-      border-radius: 50%;
-      border-right-color: transparent;
-      margin: 20px auto 0;
-      position: relative;
-    }
-
-    .symbol::after {
-      content: "";
-      width: 3px;
-      height: 30px;
-      background: var(--azul);
-      position: absolute;
-      left: 50%;
-      top: 55%;
-      transform: translateX(-50%) rotate(20deg);
-      border-radius: 3px;
-    }
-
-    header {
+      font-family: 'Inter', sans-serif;
       background: var(--azul-suave);
-      padding: 50px 20px 40px;
+      color: var(--texto);
+      line-height: 1.8;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--azul-escuro);
+      font-weight: 500;
+    }
+
+    /* CABEÇALHO FIXO */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--azul);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .topbar nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 14px;
+      font-size: 15px;
+    }
+
+    .topbar nav a.ativa {
+      background: white;
+      color: var(--azul);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* HERO */
+    header {
+      background: var(--branco);
+      padding: 110px 20px 60px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 30px;
-      margin: 20px 0 5px;
-      letter-spacing: 1px;
-      color: var(--preto);
+      font-size: 2.5rem;
+      margin-bottom: 6px;
     }
 
     header p {
-      font-size: 16px;
-      color: #444;
+      font-size: 1.1rem;
+      max-width: 640px;
+      margin: 0 auto;
     }
 
-    /* CONTAINERS */
+    /* SEÇÕES */
     section {
-      max-width: 850px;
-      margin: 40px auto;
+      max-width: 900px;
+      margin: 0 auto 50px;
       background: var(--branco);
-      padding: 35px;
-      border-radius: 14px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      padding: 45px;
+      border-radius: 24px;
     }
 
-    h1, h2 {
-      margin-top: 0;
-      color: var(--azul);
-    }
-
-    h2 {
-      border-left: 4px solid var(--azul);
-      padding-left: 10px;
-      margin-bottom: 15px;
-      font-size: 22px;
-    }
-
-    ul {
+    section ul {
       padding-left: 20px;
     }
 
-    ul li {
-      margin-bottom: 8px;
+    section li {
+      margin-bottom: 10px;
     }
 
     .sub {
-      font-weight: bold;
-      color: var(--azul);
+      font-weight: 500;
+      color: var(--azul-escuro);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        padding-top: 90px;
+      }
+
+      section {
+        padding: 35px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- SÍMBOLO -->
-  <div class="symbol"></div>
+<!-- CABEÇALHO -->
+<div class="topbar">
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="clinica.html">Clínica</a>
+    <a href="parcerias.html">Parcerias</a>
+    <a href="hana.html" class="ativa">Fundadora</a>
+    <a href="formulario.html">Formulário</a>
+  </nav>
+</div>
 
-  <header>
-    <h1>Sobre Hana Aoyuki</h1>
-    <p>Psicóloga e fundadora da Clínica Yasuragi</p>
-  </header>
+<!-- HERO -->
+<header>
+  <h1>Hana Aoyuki</h1>
+  <p>Psicóloga • Fundadora da Clínica Yasuragi</p>
+</header>
 
-  <section class="bio">
-    <p>
-      Hana Aoyuki diz que sua prática nasce do desejo de construir 
-      um espaço de acolhimento onde cada pessoa possa ser recebida com cuidado e paciência. Inspirada pela 
-      filosofia japonesa do cuidado e pela ideia de <em>安らぎ</em> que significa serenidade, sua abordagem 
-      é guiada pela sensibilidade, pela escuta profunda e pela compreensão do que cada história carrega.
-    </p>
+<!-- BIO -->
+<section>
+  <p>
+    Hana Aoyuki constrói sua prática a partir do desejo de oferecer um espaço
+    onde cada pessoa possa ser recebida com cuidado, escuta e respeito.
+    Inspirada pela filosofia japonesa do cuidado e pelo conceito de
+    <em>安らぎ</em> (yasuragi), sua abordagem é guiada pela serenidade,
+    pela presença e pela sensibilidade ao tempo de cada história.
+  </p>
 
-    <p>
-      Sua formação integra psicoterapia individual, estudos em processos emocionais, desenvolvimento humano 
-      e técnicas de acompanhamento breve. Hana dedica-se a criar encontros terapêuticos que acompanham o ritmo 
-      interno de cada pessoa, respeitando seus limites, sua força e o momento que está atravessando.
-    </p>
+  <p>
+    Sua formação integra psicoterapia individual, estudos em processos
+    emocionais e desenvolvimento humano. Hana dedica-se a criar encontros
+    terapêuticos que acompanham o ritmo interno de cada pessoa, respeitando
+    limites, forças e o momento vivido.
+  </p>
 
-    <p>
-      Seu trabalho é pautado pela ética e pelo cuidado contínuo. Hana acredita que a terapia é um lugar 
-      de encontro consigo mesmo e que uma escuta acolhedora pode abrir caminhos de transformação real.
-    </p>
+  <p>
+    Seu trabalho é pautado pela ética e pelo cuidado contínuo. Acredita que
+    a terapia é um espaço de encontro consigo mesmo e que uma escuta acolhedora
+    pode abrir caminhos reais de transformação.
+  </p>
+</section>
 
-    <h2>Áreas de interesse</h2>
-    <ul>
-      <li>Autoconhecimento e fortalecimento emocional</li>
-      <li>Regulação e compreensão das emoções</li>
-      <li>Acompanhamento em transições e mudanças de vida</li>
-      <li>Construção de limites saudáveis</li>
-      <li>Relacionamentos, vínculos e afetos</li>
-    </ul>
+<section>
+  <h2>Áreas de interesse</h2>
+  <ul>
+    <li>Autoconhecimento e fortalecimento emocional</li>
+    <li>Regulação e compreensão das emoções</li>
+    <li>Acompanhamento em transições e mudanças de vida</li>
+    <li>Construção de limites saudáveis</li>
+    <li>Relacionamentos, vínculos e afetos</li>
+  </ul>
+</section>
 
-    <h2>Formação e prática</h2>
-    <ul>
-      <li>Psicoterapia individual com perspectiva integrativa</li>
-      <li>Estudos em desenvolvimento humano e saúde emocional</li>
-      <li>Experiência com escuta sensível e processos terapêuticos breves</li>
-    </ul>
-  </section>
+<section>
+  <h2>Formação e prática</h2>
+  <ul>
+    <li>Psicoterapia individual com perspectiva integrativa</li>
+    <li>Estudos em desenvolvimento humano e saúde emocional</li>
+    <li>Experiência com escuta sensível e processos terapêuticos breves</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Formação Acadêmica</h2>
-    <ul>
-      <li>
-        <span class="sub">Bacharelado em Psicologia (2016–2020)</span><br>
-        Universidade de Keio – 慶應義塾大学, Tóquio.<br>
-        Enfoque em Psicologia Clínica e Desenvolvimento.
-      </li>
+<section>
+  <h2>Formação Acadêmica</h2>
+  <ul>
+    <li>
+      <span class="sub">Bacharelado em Psicologia (2016–2020)</span><br>
+      Universidade de Keio – 慶應義塾大学, Tóquio.
+    </li>
+    <li>
+      <span class="sub">Mestrado em Psicologia Clínica (2020–2022)</span><br>
+      Tokyo Professional Graduate School of Psychology.
+    </li>
+    <li>
+      <span class="sub">Licença Profissional — 公認心理師 (2022)</span>
+    </li>
+  </ul>
+</section>
 
-      <li>
-        <span class="sub">Mestrado Profissional em Psicologia Clínica (2020–2022)</span><br>
-        Tokyo Professional Graduate School of Psychology – 東京臨床心理専門大学院大学.<br>
-        Estágios em hospitais, clínicas e centros sociais.
-      </li>
+<section>
+  <h2>Formação Complementar</h2>
+  <ul>
+    <li>Terapia Cognitivo-Comportamental</li>
+    <li>Terapia Narrativa</li>
+    <li>Psicoterapia para Trauma Complexo</li>
+  </ul>
+</section>
 
-      <li>
-        <span class="sub">Licença Oficial – 公認心理師 (2022)</span><br>
-        Aprovação no Exame Nacional.
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Formação Complementar</h2>
-    <ul>
-      <li>Certificação em Terapia Cognitivo-Comportamental (2022–2023)</li>
-      <li>Formação em Terapia Narrativa (2021)</li>
-      <li>Curso Avançado em Psicoterapia para Trauma Complexo (2023)</li>
-    </ul>
-  </section>
+<footer>
+  Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
+  © 2025 Yasuragi
+</footer>
 
 </body>
 </html>
