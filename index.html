@@ -13,8 +13,8 @@
   <style>
     :root {
       --azul: #5A7C98;
+      --azul-escuro: #3F5F77;
       --azul-suave: #EEF3F7;
-      --verde: #7A8F87;
       --texto: #555;
       --branco: #FAFAFA;
     }
@@ -22,18 +22,18 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: var(--branco);
+      background: var(--azul-suave);
       color: var(--texto);
     }
 
-    h1, h2 {
+    h1, h2, h3 {
       font-family: 'Playfair Display', serif;
-      color: #1F1F1F;
+      color: var(--azul-escuro);
       font-weight: 500;
     }
 
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
 
     img {
@@ -42,19 +42,48 @@
       display: block;
     }
 
-    /* CABEÇALHO */
+    /* CABEÇALHO FIXO */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--azul);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    .topbar .cta {
+      background: white;
+      color: var(--azul);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* HERO */
     header {
       background:
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
         url("img/hero-atendimento.jpg") center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 160px 20px;
+      padding: 180px 20px 140px;
     }
 
     header h1 {
       font-size: 3rem;
       margin-bottom: 10px;
+      color: white;
     }
 
     header p {
@@ -64,37 +93,30 @@
       line-height: 1.7;
     }
 
-    /* SEÇÕES */
-    .section {
+    /* BLOCOS */
+    .block {
+      background: var(--branco);
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 0 auto 60px;
+      padding: 40px;
+      border-radius: 24px;
       display: flex;
-      gap: 50px;
+      gap: 40px;
       align-items: center;
     }
 
-    .section.reverse {
+    .block.reverse {
       flex-direction: row-reverse;
     }
 
-    .section img {
+    .block img {
       width: 45%;
       height: 320px;
       object-fit: cover;
     }
 
-    .section div {
+    .block div {
       width: 55%;
-    }
-
-    .section span {
-      display: block;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-
-    .section p {
-      line-height: 1.8;
     }
 
     /* AÇÕES */
@@ -102,40 +124,29 @@
       background: var(--azul-suave);
     }
 
-    .actions h2 {
-      text-align: center;
-      margin-bottom: 15px;
+    .actions-group {
+      max-width: 1100px;
+      margin: 0 auto 80px;
     }
 
-    .actions p {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 50px;
-      line-height: 1.8;
+    .actions-group h3 {
+      margin-bottom: 10px;
+    }
+
+    .actions-group p {
+      margin-bottom: 30px;
+      line-height: 1.7;
     }
 
     .actions-grid {
-      max-width: 1100px;
-      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
     }
 
-    .actions-grid img {
-      height: 260px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .actions-grid img:hover {
-      transform: scale(1.04);
-    }
-
     /* BOTÕES */
     .section-buttons {
       text-align: center;
-      padding: 60px 20px;
     }
 
     .section-buttons a {
@@ -146,22 +157,8 @@
       background: var(--azul);
       color: white;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 14px;
       font-size: 16px;
-    }
-
-    /* INSTAGRAM */
-    .instagram {
-      background: var(--azul-suave);
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .instagram a {
-      color: var(--azul);
-      font-size: 18px;
-      font-weight: 500;
-      text-decoration: none;
     }
 
     footer {
@@ -172,13 +169,13 @@
     }
 
     @media (max-width: 900px) {
-      .section,
-      .section.reverse {
+      .block,
+      .block.reverse {
         flex-direction: column;
       }
 
-      .section img,
-      .section div {
+      .block img,
+      .block div {
         width: 100%;
       }
     }
@@ -187,58 +184,65 @@
 
 <body>
 
+<div class="topbar">
+  <strong style="color:white;">Yasuragi</strong>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="clinica.html">Clínica</a>
+    <a href="hana.html">Sobre</a>
+    <a href="formulario.html" class="cta">Agendar</a>
+  </nav>
+</div>
+
 <header>
   <h1>Clínica Yasuragi</h1>
   <p>Um espaço de escuta, cuidado e presença.</p>
 </header>
 
-<section class="section">
-  <img src="img/ampulheta.jpg">
-  <div>
-    <span>⏳</span>
-    <h2>Respeito ao tempo</h2>
-    <p>O cuidado emocional acontece no ritmo de cada pessoa, com presença e continuidade.</p>
+<section>
+  <div class="block">
+    <img src="img/ampulheta.jpg">
+    <div>
+      <h2>Cuidar é respeitar o tempo</h2>
+      <p>O cuidado emocional se constrói com presença, continuidade e respeito ao ritmo de cada pessoa.</p>
+    </div>
   </div>
-</section>
 
-<section class="section reverse">
-  <img src="img/infantil.jpg">
-  <div>
-    <span>🌱</span>
-    <h2>Cuidado em cada fase</h2>
-    <p>Atendimentos que respeitam histórias, contextos e diferentes momentos da vida.</p>
-  </div>
-</section>
-
-<section class="section">
-  <img src="img/profissional.jpg">
-  <div>
-    <span>🧘‍♀️</span>
-    <h2>Ambiente acolhedor</h2>
-    <p>Um espaço seguro, sereno e humano, pensado para acolher sem julgamentos.</p>
-  </div>
-</section>
-
-<section class="section reverse">
-  <img src="img/acolhimento.jpg">
-  <div>
-    <span>🤍</span>
-    <h2>Vínculo e presença</h2>
-    <p>O cuidado se constrói na relação, na escuta atenta e no respeito aos limites.</p>
+  <div class="block reverse">
+    <img src="img/infantil.jpg">
+    <div>
+      <h2>Cuidado em cada fase da vida</h2>
+      <p>Atendimentos que respeitam histórias, contextos e diferentes momentos da vida.</p>
+    </div>
   </div>
 </section>
 
 <section class="actions">
-  <h2>👥 Cuidar também é agir</h2>
-  <p>A presença da Yasuragi se estende para além do consultório, em ações comunitárias e projetos sociais.</p>
+  <div class="actions-group">
+    <h3>Rodas e grupos terapêuticos</h3>
+    <p>Espaços coletivos de escuta, troca e construção de vínculos.</p>
+    <div class="actions-grid">
+      <img src="img/acoes-roda.jpg">
+    </div>
+  </div>
 
-  <div class="actions-grid">
-    <img src="img/acoes-roda.jpg">
-    <img src="img/acoes-maos-terra.jpg">
-    <img src="img/acoes-plantio.jpg">
-    <img src="img/acoes-marmitas.jpg">
-    <img src="img/acoes-sacolas.jpg">
-    <img src="img/acoes-voluntarios.jpg">
+  <div class="actions-group">
+    <h3>Cuidado com o meio ambiente</h3>
+    <p>Ações que reforçam o cuidado como responsabilidade coletiva.</p>
+    <div class="actions-grid">
+      <img src="img/acoes-maos-terra.jpg">
+      <img src="img/acoes-plantio.jpg">
+    </div>
+  </div>
+
+  <div class="actions-group">
+    <h3>Ações solidárias</h3>
+    <p>Campanhas de arrecadação e apoio à comunidade.</p>
+    <div class="actions-grid">
+      <img src="img/acoes-marmitas.jpg">
+      <img src="img/acoes-sacolas.jpg">
+      <img src="img/acoes-voluntarios.jpg">
+    </div>
   </div>
 </section>
 
@@ -246,11 +250,6 @@
   <a href="clinica.html">Informações da Clínica</a>
   <a href="hana.html">Sobre Hana</a>
   <a href="formulario.html">Formulário de Atendimento</a>
-</section>
-
-<section class="instagram">
-  <p>acompanhe nossos conteúdos de bem-estar</p>
-  <a href="https://instagram.com/yasuragi.clinic">@yasuragi.clinic</a>
 </section>
 
 <footer>
