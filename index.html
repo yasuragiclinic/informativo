@@ -1,10 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Clínica Yasuragi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+
+    h1, h2 {
+      font-weight: 500;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 85vh;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255,255,255,0.85);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* SEÇÕES PADRÃO */
+    .section {
+      display: flex;
+      gap: 50px;
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section img {
+      width: 45%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .section div {
+      width: 55%;
+    }
+
+    .section p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* AÇÕES */
+    .actions {
+      background: #f6f8f7;
+    }
+
+    .actions-header,
+    .actions-text {
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+
+    .actions-header p,
+    .actions-text p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .actions-grid img {
+      height: 260px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .section,
+      .section.reverse {
+        flex-direction: column;
+      }
+
+      .section img,
+      .section div {
+        width: 100%;
+      }
+
+      .hero img {
+        height: 60vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/hero-atendimento.jpg" alt="Atendimento psicológico individual">
+    <div class="hero-text">
+      <h1>Clínica Yasuragi</h1>
+      <p class="subtitle">Um espaço de escuta, cuidado e presença.</p>
+      <p class="description">
+        Aqui, o cuidado acontece no ritmo de cada pessoa,
+        com ética, acolhimento e responsabilidade.
+      </p>
+    </div>
+  </section>
+
+  <!-- TEMPO -->
+  <section class="section">
+    <img src="img/ampulheta.jpg" alt="O tempo como parte do cuidado">
+    <div>
+      <h2>Cuidar é respeitar o tempo</h2>
+      <p>
+        Acreditamos que a saúde emocional não se constrói com pressa.
+        Cada processo é único, e o caminho é feito com presença,
+        escuta e continuidade.
+      </p>
+    </div>
+  </section>
+
+  <!-- ATUAÇÃO -->
+  <section class="section reverse">
+    <img src="img/infantil.jpg" alt="Atendimento psicológico infantil">
+    <div>
+      <h2>Atendimentos que respeitam cada fase da vida</h2>
+      <p>
+        Atuamos com diferentes públicos, compreendendo que cada pessoa
+        carrega sua própria história, desafios e formas de sentir.
+        O cuidado se adapta, a escuta permanece.
+      </p>
+    </div>
+  </section>
+
+  <!-- CLÍNICA -->
+  <section class="section">
+    <img src="img/profissional.jpg" alt="Ambiente acolhedor da clínica">
+    <div>
+      <h2>Um espaço pensado para acolher</h2>
+      <p>
+        A Yasuragi foi construída para ser um ambiente seguro,
+        sereno e humano. Um lugar onde é possível falar,
+        silenciar, refletir e se reconectar, sem julgamentos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ACOLHIMENTO -->
+  <section class="section reverse">
+    <img src="img/acolhimento.jpg" alt="Acolhimento e vínculo no cuidado">
+    <div>
+      <h2>Presença que sustenta</h2>
+      <p>
+        Acreditamos no cuidado que se constrói na relação.
+        No vínculo, na escuta atenta e no respeito
+        aos limites de cada pessoa.
+      </p>
+    </div>
+  </section>
+
+  <!-- EQUIPE -->
+  <section class="section">
+    <img src="img/equipe.jpg" alt="Equipe e projetos da clínica">
+    <div>
+      <h2>Para além do consultório</h2>
+      <p>
+        Nosso trabalho também se estende a ações, projetos
+        e espaços de troca. Cuidar é estar presente
+        na escuta individual e no compromisso coletivo.
+      </p>
+    </div>
+  </section>
+
+  <!-- AÇÕES -->
+  <section class="actions">
+    <div class="actions-header">
+      <h2>Cuidar também é agir</h2>
+      <p>
+        Acreditamos que o cuidado não se limita ao consultório.
+        Ele se manifesta na escuta coletiva, nas ações comunitárias
+        e no compromisso com o bem-estar social.
+      </p>
+    </div>
+
+    <div class="actions-grid">
+      <img src="img/acoes-roda.jpg" alt="Roda de conversa comunitária">
+      <img src="img/acoes-maos-terra.jpg" alt="Mãos unidas cuidando da terra">
+      <img src="img/acoes-plantio.jpg" alt="Plantio de árvore coletivo">
+      <img src="img/acoes-marmitas.jpg" alt="Campanha de distribuição de refeições">
+      <img src="img/acoes-sacolas.jpg" alt="Doação de alimentos">
+      <img src="img/acoes-voluntarios.jpg" alt="Voluntários organizando doações">
+    </div>
+
+    <div class="actions-text">
+      <p>
+        Por meio de projetos, encontros, campanhas e ações solidárias,
+        buscamos construir espaços de acolhimento, troca e presença,
+        respeitando a dignidade e a singularidade de cada pessoa.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
   <style>
     /* PALETA */
     :root {
