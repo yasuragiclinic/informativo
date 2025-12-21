@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Parcerias — Clínica Yasuragi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul-principal: #5A7C98;
+      --azul-suave: #E9F1F6;
+      --azul-escuro: #3E5F75;
+      --texto: #2F2F2F;
+      --fundo: #FAFAFA;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+    }
+
+    /* CABEÇALHO FIXO */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--azul-principal);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: white;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    nav a.agendar {
+      background: white;
+      color: var(--azul-principal);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 90px;
+      padding: 80px 20px;
+      text-align: center;
+      background: var(--azul-suave);
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: var(--azul-escuro);
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* PARCEIROS */
+    .partners {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .partner-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .partner-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .partner-content {
+      padding: 26px;
+    }
+
+    .partner-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--azul-escuro);
+    }
+
+    .partner-content span {
+      display: block;
+      font-size: 13px;
+      color: var(--azul-principal);
+      margin-bottom: 12px;
+    }
+
+    .partner-content p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* RODAPÉ */
+    footer {
+      background: var(--azul-suave);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Yasuragi</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="clinica.html">Clínica</a>
+      <a href="hana.html">Sobre</a>
+      <a href="parcerias.html">Parcerias</a>
+      <a href="formulario.html" class="agendar">Agendar</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Nossas Parcerias</h2>
+    <p>
+      A Yasuragi constrói seu cuidado em diálogo com outras instituições
+      que compartilham valores de ética, acolhimento e responsabilidade social.
+      Juntos, ampliamos redes de escuta, apoio e presença.
+    </p>
+  </section>
+
+  <!-- PARCEIROS -->
+  <section class="partners">
+
+    <div class="partner-card">
+      <img src="img/parceria-hospital-kokoro.jpg" alt="Hospital Kokoro no Michi">
+      <div class="partner-content">
+        <h3>Hospital Kokoro no Michi</h3>
+        <span>Kobe — Hospital Geral</span>
+        <p>
+          Instituição hospitalar parceira em encaminhamentos integrados,
+          cuidado multidisciplinar e atenção humanizada à saúde mental
+          em contextos clínicos ampliados.
+        </p>
+      </div>
+    </div>
+
+    <div class="partner-card">
+      <img src="img/parceria-clinica-aoi.jpg" alt="Clínica Aoi">
+      <div class="partner-content">
+        <h3>Clínica Aoi</h3>
+        <span>Kobe — Saúde Integrativa</span>
+        <p>
+          Clínica voltada ao cuidado integral, com práticas complementares
+          que dialogam com a psicologia e promovem equilíbrio físico
+          e emocional.
+        </p>
+      </div>
+    </div>
+
+    <div class="partner-card">
+      <img src="img/parceria-instituto-sakura.jpg" alt="Instituto Sakura">
+      <div class="partner-content">
+        <h3>Instituto Sakura</h3>
+        <span>Hyōgo — Desenvolvimento Humano</span>
+        <p>
+          Instituição dedicada à educação emocional, pesquisa social
+          e projetos comunitários voltados ao bem-estar coletivo.
+        </p>
+      </div>
+    </div>
+
+    <div class="partner-card">
+      <img src="img/parceria-colegio-hikari.jpg" alt="Colégio Hikari">
+      <div class="partner-content">
+        <h3>Colégio Hikari</h3>
+        <span>Kobe — Educação Infantil e Fundamental</span>
+        <p>
+          Escola parceira em projetos de escuta, orientação emocional
+          e acompanhamento de crianças em suas diferentes fases
+          de desenvolvimento.
+        </p>
+      </div>
+    </div>
+
+    <div class="partner-card">
+      <img src="img/parceria-casa-akarui.jpg" alt="Casa Akarui">
+      <div class="partner-content">
+        <h3>Casa Akarui</h3>
+        <span>Kobe — Acolhimento Infantil</span>
+        <p>
+          Espaço de acolhimento e cuidado de crianças, com quem
+          desenvolvemos ações de apoio psicológico, escuta sensível
+          e fortalecimento de vínculos.
+        </p>
+      </div>
+    </div>
+
+    <div class="partner-card">
+      <img src="img/parceria-midori-no-wa.jpg" alt="Projeto Midori no Wa">
+      <div class="partner-content">
+        <h3>Projeto Midori no Wa</h3>
+        <span>Hyōgo — Meio Ambiente & Comunidade</span>
+        <p>
+          Iniciativa voltada à reconexão com a natureza por meio
+          de ações ambientais, cuidado coletivo e fortalecimento
+          do vínculo entre pessoas e território.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
+    Kobe-shi, Chūō-ku, Hanakuma — Japão<br>
+    © 2025 Yasuragi
+  </footer>
+
+</body>
+</html>
