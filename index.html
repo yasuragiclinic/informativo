@@ -5,71 +5,71 @@
   <title>Clínica Yasuragi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --azul: #5A7C98;
+      --azul-suave: #EEF3F7;
+      --verde: #7A8F87;
+      --texto: #555;
+      --branco: #FAFAFA;
+    }
+
     body {
       margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
-      background: #ffffff;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: var(--branco);
+      color: var(--texto);
     }
 
     h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #1F1F1F;
       font-weight: 500;
     }
 
     section {
-      padding: 80px 20px;
+      padding: 70px 20px;
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
+      border-radius: 18px;
       display: block;
     }
 
-    /* HERO */
-    .hero {
-      position: relative;
+    /* CABEÇALHO */
+    header {
+      background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("img/hero-atendimento.jpg") center/cover no-repeat;
+      color: white;
       text-align: center;
+      padding: 160px 20px;
     }
 
-    .hero img {
-      width: 100%;
-      height: 85vh;
-      object-fit: cover;
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(255,255,255,0.85);
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 500px;
-    }
-
-    .hero-text h1 {
-      font-size: 2.5rem;
+    header h1 {
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
-    .subtitle {
+    header p {
       font-size: 1.2rem;
-      margin-bottom: 10px;
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.7;
     }
 
-    .description {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    /* SEÇÕES PADRÃO */
+    /* SEÇÕES */
     .section {
-      display: flex;
-      gap: 50px;
       max-width: 1100px;
       margin: 0 auto;
+      display: flex;
+      gap: 50px;
       align-items: center;
     }
 
@@ -81,51 +81,96 @@
       width: 45%;
       height: 320px;
       object-fit: cover;
-      border-radius: 20px;
     }
 
     .section div {
       width: 55%;
     }
 
+    .section span {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
     .section p {
-      line-height: 1.6;
-      color: #555;
+      line-height: 1.8;
     }
 
     /* AÇÕES */
     .actions {
-      background: #f6f8f7;
+      background: var(--azul-suave);
     }
 
-    .actions-header,
-    .actions-text {
-      max-width: 700px;
-      margin: 0 auto 40px auto;
+    .actions h2 {
       text-align: center;
+      margin-bottom: 15px;
     }
 
-    .actions-header p,
-    .actions-text p {
-      line-height: 1.6;
-      color: #555;
+    .actions p {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      line-height: 1.8;
     }
 
     .actions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
       max-width: 1100px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
     }
 
     .actions-grid img {
       height: 260px;
       object-fit: cover;
-      border-radius: 16px;
+      transition: transform 0.3s ease;
     }
 
-    /* RESPONSIVO */
+    .actions-grid img:hover {
+      transform: scale(1.04);
+    }
+
+    /* BOTÕES */
+    .section-buttons {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .section-buttons a {
+      display: block;
+      margin: 15px auto;
+      max-width: 280px;
+      padding: 15px;
+      background: var(--azul);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 16px;
+    }
+
+    /* INSTAGRAM */
+    .instagram {
+      background: var(--azul-suave);
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .instagram a {
+      color: var(--azul);
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 13px;
+      color: #777;
+    }
+
     @media (max-width: 900px) {
       .section,
       .section.reverse {
@@ -136,267 +181,83 @@
       .section div {
         width: 100%;
       }
-
-      .hero img {
-        height: 60vh;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="img/hero-atendimento.jpg" alt="Atendimento psicológico individual">
-    <div class="hero-text">
-      <h1>Clínica Yasuragi</h1>
-      <p class="subtitle">Um espaço de escuta, cuidado e presença.</p>
-      <p class="description">
-        Aqui, o cuidado acontece no ritmo de cada pessoa,
-        com ética, acolhimento e responsabilidade.
-      </p>
-    </div>
-  </section>
+<header>
+  <h1>Clínica Yasuragi</h1>
+  <p>Um espaço de escuta, cuidado e presença.</p>
+</header>
 
-  <!-- TEMPO -->
-  <section class="section">
-    <img src="img/ampulheta.jpg" alt="O tempo como parte do cuidado">
-    <div>
-      <h2>Cuidar é respeitar o tempo</h2>
-      <p>
-        Acreditamos que a saúde emocional não se constrói com pressa.
-        Cada processo é único, e o caminho é feito com presença,
-        escuta e continuidade.
-      </p>
-    </div>
-  </section>
+<section class="section">
+  <img src="img/ampulheta.jpg">
+  <div>
+    <span>⏳</span>
+    <h2>Respeito ao tempo</h2>
+    <p>O cuidado emocional acontece no ritmo de cada pessoa, com presença e continuidade.</p>
+  </div>
+</section>
 
-  <!-- ATUAÇÃO -->
-  <section class="section reverse">
-    <img src="img/infantil.jpg" alt="Atendimento psicológico infantil">
-    <div>
-      <h2>Atendimentos que respeitam cada fase da vida</h2>
-      <p>
-        Atuamos com diferentes públicos, compreendendo que cada pessoa
-        carrega sua própria história, desafios e formas de sentir.
-        O cuidado se adapta, a escuta permanece.
-      </p>
-    </div>
-  </section>
+<section class="section reverse">
+  <img src="img/infantil.jpg">
+  <div>
+    <span>🌱</span>
+    <h2>Cuidado em cada fase</h2>
+    <p>Atendimentos que respeitam histórias, contextos e diferentes momentos da vida.</p>
+  </div>
+</section>
 
-  <!-- CLÍNICA -->
-  <section class="section">
-    <img src="img/profissional.jpg" alt="Ambiente acolhedor da clínica">
-    <div>
-      <h2>Um espaço pensado para acolher</h2>
-      <p>
-        A Yasuragi foi construída para ser um ambiente seguro,
-        sereno e humano. Um lugar onde é possível falar,
-        silenciar, refletir e se reconectar, sem julgamentos.
-      </p>
-    </div>
-  </section>
+<section class="section">
+  <img src="img/profissional.jpg">
+  <div>
+    <span>🧘‍♀️</span>
+    <h2>Ambiente acolhedor</h2>
+    <p>Um espaço seguro, sereno e humano, pensado para acolher sem julgamentos.</p>
+  </div>
+</section>
 
-  <!-- ACOLHIMENTO -->
-  <section class="section reverse">
-    <img src="img/acolhimento.jpg" alt="Acolhimento e vínculo no cuidado">
-    <div>
-      <h2>Presença que sustenta</h2>
-      <p>
-        Acreditamos no cuidado que se constrói na relação.
-        No vínculo, na escuta atenta e no respeito
-        aos limites de cada pessoa.
-      </p>
-    </div>
-  </section>
+<section class="section reverse">
+  <img src="img/acolhimento.jpg">
+  <div>
+    <span>🤍</span>
+    <h2>Vínculo e presença</h2>
+    <p>O cuidado se constrói na relação, na escuta atenta e no respeito aos limites.</p>
+  </div>
+</section>
 
-  <!-- EQUIPE -->
-  <section class="section">
-    <img src="img/equipe.jpg" alt="Equipe e projetos da clínica">
-    <div>
-      <h2>Para além do consultório</h2>
-      <p>
-        Nosso trabalho também se estende a ações, projetos
-        e espaços de troca. Cuidar é estar presente
-        na escuta individual e no compromisso coletivo.
-      </p>
-    </div>
-  </section>
+<section class="actions">
+  <h2>👥 Cuidar também é agir</h2>
+  <p>A presença da Yasuragi se estende para além do consultório, em ações comunitárias e projetos sociais.</p>
 
-  <!-- AÇÕES -->
-  <section class="actions">
-    <div class="actions-header">
-      <h2>Cuidar também é agir</h2>
-      <p>
-        Acreditamos que o cuidado não se limita ao consultório.
-        Ele se manifesta na escuta coletiva, nas ações comunitárias
-        e no compromisso com o bem-estar social.
-      </p>
-    </div>
+  <div class="actions-grid">
+    <img src="img/acoes-roda.jpg">
+    <img src="img/acoes-maos-terra.jpg">
+    <img src="img/acoes-plantio.jpg">
+    <img src="img/acoes-marmitas.jpg">
+    <img src="img/acoes-sacolas.jpg">
+    <img src="img/acoes-voluntarios.jpg">
+  </div>
+</section>
 
-    <div class="actions-grid">
-      <img src="img/acoes-roda.jpg" alt="Roda de conversa comunitária">
-      <img src="img/acoes-maos-terra.jpg" alt="Mãos unidas cuidando da terra">
-      <img src="img/acoes-plantio.jpg" alt="Plantio de árvore coletivo">
-      <img src="img/acoes-marmitas.jpg" alt="Campanha de distribuição de refeições">
-      <img src="img/acoes-sacolas.jpg" alt="Doação de alimentos">
-      <img src="img/acoes-voluntarios.jpg" alt="Voluntários organizando doações">
-    </div>
+<section class="section-buttons">
+  <a href="clinica.html">Informações da Clínica</a>
+  <a href="hana.html">Sobre Hana</a>
+  <a href="formulario.html">Formulário de Atendimento</a>
+</section>
 
-    <div class="actions-text">
-      <p>
-        Por meio de projetos, encontros, campanhas e ações solidárias,
-        buscamos construir espaços de acolhimento, troca e presença,
-        respeitando a dignidade e a singularidade de cada pessoa.
-      </p>
-    </div>
-  </section>
+<section class="instagram">
+  <p>acompanhe nossos conteúdos de bem-estar</p>
+  <a href="https://instagram.com/yasuragi.clinic">@yasuragi.clinic</a>
+</section>
 
-</body>
-</html>
-  <style>
-    /* PALETA */
-    :root {
-      --azul: #5A7C98;
-      --azul-suave: #E4EEF4;
-      --cinza: #BFC6C9;
-      --preto: #1F1F1F;
-      --branco: #FAFAFA;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background-color: var(--branco);
-      color: var(--preto);
-    }
-
-    /* SYMBOL ENSO + BAMBU (placeholder) */
-    .symbol {
-      width: 70px;
-      height: 70px;
-      border: 4px solid var(--azul);
-      border-radius: 50%;
-      border-right-color: transparent;
-      margin: 20px auto 10px;
-      position: relative;
-    }
-
-    .symbol::after {
-      content: "";
-      width: 3px;
-      height: 30px;
-      background: var(--azul);
-      position: absolute;
-      left: 50%;
-      top: 55%;
-      transform: translateX(-50%) rotate(20deg);
-      border-radius: 3px;
-    }
-
-    /* HERO SECTION */
-    header {
-      background: var(--azul-suave);
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    header h1 {
-      font-size: 28px;
-      margin-top: 20px;
-    }
-
-    header p {
-      margin-top: 5px;
-      font-size: 16px;
-      color: #333;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: var(--azul);
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    /* BOTÕES SECUNDÁRIOS */
-    .section-buttons {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .section-buttons a {
-      display: block;
-      margin: 15px auto;
-      width: 250px;
-      padding: 14px;
-      background: var(--azul);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    /* INSTAGRAM */
-    .instagram {
-      text-align: center;
-      padding: 40px 20px;
-      background: var(--azul-suave);
-    }
-
-    .instagram a {
-      color: var(--azul);
-      font-size: 18px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 13px;
-      color: #666;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- SÍMBOLO -->
-  <div class="symbol"></div>
-
-  <!-- HERO -->
-  <header>
-    <h1>Yasuragi</h1>
-    <p>Cuidado integrativo, sutileza e presença.</p>
-  </header>
-
-  <!-- TRÊS BOTÕES PRINCIPAIS -->
-  <section class="section-buttons">
-    <a href="clinica.html">Informações da Clínica</a>
-    <a href="hana.html">Sobre Hana</a>
-    <a href="formulario.html">Formulário de Atendimento</a>
-  </section>
-
-  <!-- INSTAGRAM -->
-  <section class="instagram">
-    <p>acompanhe nossos conteúdos de bem-estar</p>
-    <a href="https://instagram.com/yasuragi.clinic">@yasuragi.clinic</a>
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer>
-    Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
-    Endereço: <i>Kobe-shi, Chūō-ku, Hanakuma, 2-19-8 — Japão</i><br>
-    © 2025 Yasuragi
-  </footer>
+<footer>
+  Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
+  Kobe-shi, Chūō-ku, Hanakuma, 2-19-8 — Japão<br>
+  © 2025 Yasuragi
+</footer>
 
 </body>
 </html>
