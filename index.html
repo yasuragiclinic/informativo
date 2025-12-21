@@ -43,31 +43,42 @@
     }
 
     /* CABEÇALHO FIXO */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--azul);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 24px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
+  .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--azul);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  gap: 20px;
+}
 
-    .topbar a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 15px;
-    }
+.topbar strong {
+  font-size: 18px;
+}
 
-    .topbar .cta {
-      background: white;
-      color: var(--azul);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: 500;
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.topbar nav a.cta {
+  background: white;
+  color: var(--azul);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 500;
+
     }
 
     /* HERO */
@@ -206,7 +217,6 @@
       <h2>Cuidar é respeitar o tempo</h2>
       <p>O cuidado emocional se constrói com presença, continuidade e respeito ao ritmo de cada pessoa.</p>
     </div>
-  </div>
 
   <div class="block reverse">
     <img src="img/infantil.jpg">
@@ -214,7 +224,6 @@
       <h2>Cuidado em cada fase da vida</h2>
       <p>Atendimentos que respeitam histórias, contextos e diferentes momentos da vida.</p>
     </div>
-  </div>
 </section>
 
 <section class="actions">
@@ -224,7 +233,6 @@
     <div class="actions-grid">
       <img src="img/acoes-roda.jpg">
     </div>
-  </div>
 
   <div class="actions-group">
     <h3>Cuidado com o meio ambiente</h3>
@@ -233,7 +241,6 @@
       <img src="img/acoes-maos-terra.jpg">
       <img src="img/acoes-plantio.jpg">
     </div>
-  </div>
 
   <div class="actions-group">
     <h3>Ações solidárias</h3>
@@ -243,15 +250,7 @@
       <img src="img/acoes-sacolas.jpg">
       <img src="img/acoes-voluntarios.jpg">
     </div>
-  </div>
-</section>
-
-<section class="section-buttons">
-  <a href="clinica.html">Informações da Clínica</a>
-  <a href="hana.html">Sobre Hana</a>
-  <a href="formulario.html">Formulário de Atendimento</a>
-</section>
-
+  
 <footer>
   Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
   Kobe-shi, Chūō-ku, Hanakuma, 2-19-8 — Japão<br>
