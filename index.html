@@ -8,186 +8,165 @@
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --azul: #5A7C98;
-      --azul-escuro: #3F5F77;
-      --azul-suave: #EEF3F7;
-      --texto: #555;
-      --branco: #FAFAFA;
+      --azul-principal: #5A7C98;
+      --azul-escuro: #3E5F75;
+      --azul-suave: #E9F1F6;
+      --texto: #2F2F2F;
+      --fundo: #FAFAFA;
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: var(--azul-suave);
+      background: var(--fundo);
       color: var(--texto);
     }
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--azul-escuro);
-      font-weight: 500;
-    }
-
-    section {
-      padding: 80px 20px;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 18px;
-      display: block;
-    }
-
-    /* CABEÇALHO FIXO */
-  .topbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--azul);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 20px;
-  gap: 20px;
-}
-
-.topbar strong {
-  font-size: 18px;
-}
-
-.topbar nav {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.topbar nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  white-space: nowrap;
-}
-
-.topbar nav a.cta {
-  background: white;
-  color: var(--azul);
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-weight: 500;
-
-    }
-
-    /* HERO */
+    /* HEADER FIXO */
     header {
-      background:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url("img/hero-atendimento.jpg") center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 180px 20px 140px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--azul-principal);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 28px;
+      z-index: 1000;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
       color: white;
+      margin: 0;
     }
 
-    header p {
-      font-size: 1.2rem;
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.7;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 15px;
+      opacity: 0.9;
     }
 
-    /* BLOCOS */
-    .block {
-      background: var(--branco);
-      max-width: 1100px;
-      margin: 0 auto 60px;
-      padding: 40px;
-      border-radius: 24px;
-      display: flex;
-      gap: 40px;
-      align-items: center;
+    nav a:hover {
+      opacity: 1;
     }
 
-    .block.reverse {
-      flex-direction: row-reverse;
+    nav a.formulario {
+      background: white;
+      color: var(--azul-principal);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 500;
     }
 
-    .block img {
-      width: 45%;
-      height: 320px;
+    /* HERO */
+    .hero {
+      margin-top: 90px;
+      position: relative;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 85vh;
       object-fit: cover;
     }
 
-    .block div {
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 42px;
+      border-radius: 24px;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    .hero-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: var(--azul-escuro);
+      margin-bottom: 12px;
+    }
+
+    .hero-text p {
+      line-height: 1.7;
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* SEÇÕES */
+    section.content {
+      max-width: 1100px;
+      margin: 100px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 60px;
+      align-items: center;
+    }
+
+    section.content.reverse {
+      flex-direction: row-reverse;
+    }
+
+    section.content img {
+      width: 45%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    section.content div {
       width: 55%;
     }
 
-    /* AÇÕES */
-    .actions {
-      background: var(--azul-suave);
+    section.content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--azul-escuro);
+      margin-bottom: 14px;
     }
 
-    .actions-group {
-      max-width: 1100px;
-      margin: 0 auto 80px;
-    }
-
-    .actions-group h3 {
-      margin-bottom: 10px;
-    }
-
-    .actions-group p {
-      margin-bottom: 30px;
+    section.content p {
       line-height: 1.7;
+      color: #555;
     }
 
-    .actions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    /* BOTÕES */
-    .section-buttons {
-      text-align: center;
-    }
-
-    .section-buttons a {
-      display: block;
-      margin: 15px auto;
-      max-width: 280px;
-      padding: 15px;
-      background: var(--azul);
-      color: white;
-      text-decoration: none;
-      border-radius: 14px;
-      font-size: 16px;
-    }
-
+    /* RODAPÉ */
     footer {
+      background: var(--azul-suave);
       text-align: center;
-      padding: 30px;
+      padding: 40px 20px;
       font-size: 13px;
-      color: #777;
+      color: #666;
+      margin-top: 100px;
     }
 
     @media (max-width: 900px) {
-      .block,
-      .block.reverse {
+      section.content,
+      section.content.reverse {
         flex-direction: column;
       }
 
-      .block img,
-      .block div {
+      section.content img,
+      section.content div {
         width: 100%;
+      }
+
+      .hero img {
+        height: 60vh;
+      }
+
+      .hero-text h2 {
+        font-size: 28px;
       }
     }
   </style>
@@ -195,67 +174,74 @@
 
 <body>
 
-<div class="topbar">
-  <strong style="color:white;">Yasuragi</strong>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="clinica.html">Clínica</a>
-    <a href="hana.html">Sobre</a>
-    <a href="formulario.html" class="cta">Agendar</a>
-  </nav>
-</div>
+  <!-- HEADER -->
+  <header>
+    <h1>Yasuragi</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="clinica.html">Clínica</a>
+      <a href="parcerias.html">Parcerias</a>
+      <a href="hana.html">Fundadora</a>
+      <a href="formulario.html" class="formulario">Formulário</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Clínica Yasuragi</h1>
-  <p>Um espaço de escuta, cuidado e presença.</p>
-</header>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="img/hero-atendimento.jpg" alt="Atendimento psicológico">
+    <div class="hero-text">
+      <h2>Clínica Yasuragi</h2>
+      <p>
+        Um espaço de escuta, cuidado e presença.<br>
+        Aqui, o tempo é respeitado e o vínculo é essencial.
+      </p>
+    </div>
+  </section>
 
-<section>
-  <div class="block">
-    <img src="img/ampulheta.jpg">
+  <!-- CONTEÚDO -->
+  <section class="content">
+    <img src="img/ampulheta.jpg" alt="O tempo no cuidado">
     <div>
-      <h2>Cuidar é respeitar o tempo</h2>
-      <p>O cuidado emocional se constrói com presença, continuidade e respeito ao ritmo de cada pessoa.</p>
+      <h3>Cuidar é respeitar o tempo</h3>
+      <p>
+        A saúde emocional não se constrói com pressa.
+        Cada processo é singular e merece um espaço
+        onde o ritmo interno possa ser acolhido
+        com ética e presença.
+      </p>
     </div>
+  </section>
 
-  <div class="block reverse">
-    <img src="img/infantil.jpg">
+  <section class="content reverse">
+    <img src="img/infantil.jpg" alt="Atendimento em diferentes fases">
     <div>
-      <h2>Cuidado em cada fase da vida</h2>
-      <p>Atendimentos que respeitam histórias, contextos e diferentes momentos da vida.</p>
+      <h3>Cuidado em cada fase da vida</h3>
+      <p>
+        Atuamos com diferentes públicos, respeitando
+        histórias, contextos e momentos distintos.
+        O cuidado se adapta — a escuta permanece.
+      </p>
     </div>
-</section>
+  </section>
 
-<section class="actions">
-  <div class="actions-group">
-    <h3>Rodas e grupos terapêuticos</h3>
-    <p>Espaços coletivos de escuta, troca e construção de vínculos.</p>
-    <div class="actions-grid">
-      <img src="img/acoes-roda.jpg">
+  <section class="content">
+    <img src="img/profissional.jpg" alt="Ambiente da clínica">
+    <div>
+      <h3>Um espaço pensado para acolher</h3>
+      <p>
+        A Yasuragi foi construída para ser um lugar
+        seguro, sereno e humano. Um espaço onde
+        falar, silenciar e refletir são igualmente válidos.
+      </p>
     </div>
+  </section>
 
-  <div class="actions-group">
-    <h3>Cuidado com o meio ambiente</h3>
-    <p>Ações que reforçam o cuidado como responsabilidade coletiva.</p>
-    <div class="actions-grid">
-      <img src="img/acoes-maos-terra.jpg">
-      <img src="img/acoes-plantio.jpg">
-    </div>
-
-  <div class="actions-group">
-    <h3>Ações solidárias</h3>
-    <p>Campanhas de arrecadação e apoio à comunidade.</p>
-    <div class="actions-grid">
-      <img src="img/acoes-marmitas.jpg">
-      <img src="img/acoes-sacolas.jpg">
-      <img src="img/acoes-voluntarios.jpg">
-    </div>
-  
-<footer>
-  Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
-  Kobe-shi, Chūō-ku, Hanakuma, 2-19-8 — Japão<br>
-  © 2025 Yasuragi
-</footer>
+  <!-- RODAPÉ -->
+  <footer>
+    Clínica Yasuragi • Bem-estar e cuidado integrativo<br>
+    Kobe-shi, Chūō-ku, Hanakuma — Japão<br>
+    © 2025 Yasuragi
+  </footer>
 
 </body>
 </html>
