@@ -43,32 +43,39 @@
     }
 
     /* CABEÇALHO FIXO */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--azul);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 14px 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
+    /* CABEÇALHO – AJUSTE DEFINITIVO */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--azul);
+  padding: 14px 18px;
+}
 
-    .topbar nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 14px;
-      font-size: 15px;
-    }
+.topbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;              /* DIMINUI O ESPAÇO ENTRE ITENS */
+  flex-wrap: nowrap;      /* NÃO DEIXA QUEBRAR */
+}
 
-    .topbar nav a.formulario {
-      background: white;
-      color: var(--azul);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: 500;
-    }
+.topbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;        /* UM POUCO MENOR */
+  white-space: nowrap;
+}
+
+/* PÍLULA DO FORMULÁRIO */
+.topbar a.formulario,
+.topbar a.cta {
+  background: white;
+  color: var(--azul);
+  padding: 6px 14px;      /* MAIS COMPACTA */
+  border-radius: 999px;
+  font-weight: 500;
+}
 
     /* HERO */
     header {
